@@ -48,7 +48,7 @@ layout: page
 
       <p class="post-meta">
         {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
-        Posted on {{ post.date | date: date_format }}
+        Posté le {{ post.date | date: date_format }}
       </p>
 
       {% if thumbnail != "" %}
@@ -73,7 +73,7 @@ layout: page
         {{ post.excerpt | strip_html | truncatewords: excerpt_length }}
         {% assign excerpt_word_count = post.excerpt | number_of_words %}
         {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
-          <a href="{{ post.url | absolute_url }}" class="post-read-more">[Read&nbsp;More]</a>
+          <a href="{{ post.url | absolute_url }}" class="post-read-more">[Lire&nbsp;la&nbsp;suite]</a>
         {% endif %}
       </div>
       {% endunless %}
