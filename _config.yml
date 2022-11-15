@@ -10,7 +10,7 @@
 ############################
 
 # Name of website
-title: Pierre PHU
+title: Home
 
 # Your name to show in the footer
 author: Pierre PHU
@@ -20,7 +20,7 @@ author: Pierre PHU
 ###############################################
 
 navbar-links:
-  Mes Projets: "Projets"
+  Mes Projets: "projets"
   Mon CV : "assets/img/cv.pdf"
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
