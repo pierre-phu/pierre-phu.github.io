@@ -1,0 +1,62 @@
+---
+layout: default
+image: /assets/img/ocean/card.jpg
+redirect_from:
+  - /projets/
+---
+{% assign groups = "ml|making" | split: "|" %}
+
+<section class="hero wrap">
+  <img class="avatar" src="{{ '/assets/img/pierre.jpg' | relative_url }}" alt="Portrait of Pierre Phu" width="96" height="96">
+  <h1>Pierre Phu</h1>
+  <p class="tagline">Engineer working in applied AI. These are my side projects.</p>
+  <p class="intro">
+    I trained as an engineer at ISAE-SUPAERO. On my own time I build two kinds of things:
+    deep learning models on data I go out and collect, and objects made by hand from wood, foam and metal.
+    Constraints are what make a problem interesting to me: a drone's battery life, the tools in a workshop, 30&nbsp;kg of gear on a bike.
+    I care most about work with a real-world stake, from marine life to health.
+  </p>
+</section>
+
+<div id="projects">
+  {% for group in groups %}
+  {% assign items = site.projects | where: "group", group | sort: "order" %}
+  <section class="group wrap" aria-labelledby="group-{{ group }}">
+    <div class="group-head">
+      {% if group == "ml" %}
+      <h2 id="group-{{ group }}">Machine learning</h2>
+      <p>Models trained on footage I filmed and on real ocean data.</p>
+      {% else %}
+      <h2 id="group-{{ group }}">Built by hand</h2>
+      <p>Gear and objects made in the workshop and used on the road.</p>
+      {% endif %}
+    </div>
+    <div class="grid">
+      {% for project in items %}
+      <a class="card" href="{{ project.url | relative_url }}">
+        <img src="{{ project.card | relative_url }}" alt="" width="960" height="600" loading="lazy">
+        <div class="card-body">
+          <p class="eyebrow">{{ project.year }} · {{ project.context }}</p>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.summary }}</p>
+          <ul class="tags" aria-label="Tools">
+            {% for tool in project.tools %}<li>{{ tool }}</li>{% endfor %}
+          </ul>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>
+
+<section class="contact wrap">
+  <div class="contact-box">
+    <h2>Get in touch</h2>
+    <p>Questions about a project, or want to talk? Message me on LinkedIn. My code is on GitHub.</p>
+    <p class="actions">
+      <a class="button primary" href="https://www.linkedin.com/in/{{ site.social.linkedin }}/">LinkedIn</a>
+      <a class="button" href="https://github.com/{{ site.social.github }}">GitHub</a>
+    </p>
+  </div>
+</section>

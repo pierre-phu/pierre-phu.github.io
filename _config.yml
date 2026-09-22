@@ -1,0 +1,41 @@
+title: Pierre Phu
+tagline: Side projects
+description: Side projects by Pierre Phu, an engineer working in applied AI. Deep learning on drone and ocean data, plus things built by hand.
+url: https://pierre-phu.github.io
+baseurl: ""
+lang: en
+
+author:
+  name: Pierre Phu
+
+social:
+  github: pierre-phu
+  linkedin: pierrephu
+
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: pretty
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
