@@ -6,7 +6,7 @@ year: 2023
 context: Bike and surf trip
 group: making
 order: 3
-tools: [Fiberglass, Epoxy, Pallet wood, Bike wheels]
+tools: [SolidWorks, Fiberglass, Epoxy, Pallet wood, Bike wheels]
 facts:
   - label: Route
     value: Agadir to Essaouira, 500+ km, 30+ kg of gear
@@ -38,7 +38,7 @@ The trailers carried everything: surfboard, wetsuit and the rest. We built them 
 
 ### The surfboard
 
-The board took the most time by far. None of us had shaped a board before, so we followed tutorials and got help from a few friends. It took four stages:
+The board took the most time by far. None of us had shaped a board before, so we followed tutorials and got help from a few friends. I also modeled the board in 3D in SolidWorks to estimate its volume. Building it took four stages:
 
 1. Cutting and shaping the foam blank. The school's hot-wire cutter helped a lot here (see [Workshop builds]({{ "/projects/workshop/" | relative_url }})).
 2. Laminating with fiberglass and epoxy resin.
